@@ -1,11 +1,9 @@
 <h2>Your conversation with <%= @opposed_user.name %></h2>
 
-<ul>
-  <% @conversation.messages.each do |m| %>
-    <li><%= m.user.name %>: <%= m.body %></li>
-  <% end %>
-</ul>
+<!-- render conversation box -->
+<%= render 'conversations/conversation', conversation_messages: @conversation.messages %>
 
+<!-- render new message form -->
 <%= render 'conversations/new_message_form', conversation: @conversation, new_message: @conversation.messages.new %>
 
 
