@@ -1,10 +1,13 @@
 <h2>Your conversation with <%= @opposed_user.name %></h2>
 
 <!-- render conversation box -->
-<%= render 'conversations/conversation', conversation_messages: @conversation.messages %>
+<ul>
+  <%= render 'conversations/conversation', conversation_messages: @conversation.messages %>
+</ul>
 
 <!-- render new message form -->
-<%= render 'conversations/new_message_form', conversation: @conversation, new_message: @conversation.messages.new %>
+<%= render 'conversations/new_message_form',
+    conversation: @conversation, new_message: @conversation.messages.new %>
 
 
 

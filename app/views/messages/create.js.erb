@@ -1,0 +1,13 @@
+function refreshForm(innerHTML) {
+  const newMessageForm = document.getElementById('new-message');
+  newMessageForm.innerHTML = innerHTML;
+}
+
+function addMessage(messageHTML) {
+  const messages = document.getElementById('messages');
+  messages.insertAdjacentHTML('beforeend', messageHTML);
+}
+
+addMessage('<%= j render "messages/message", message: @message %>');
+refreshForm('<%= j render "conversations/new_message_form", conversation: @conversation, new_message: Message.new %>');
+

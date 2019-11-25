@@ -1,5 +1,5 @@
-<ul>
-  <% conversation_messages.each do |m| %>
-    <li><%= m.user.name %>: <%= m.body %></li>
-  <% end %>
-</ul>
+<div id="messages">
+    <% conversation_messages.each do |m| %>
+      <li><%= m.user.name %>: <%= m.body %></li>
+    <% end %>
+</div>
